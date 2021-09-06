@@ -74,7 +74,7 @@ public class SterlingTransactionService {
     }
 
     private String buildQuery(List<SterlingRequeryResponseData> sterlingRequeryResponseDataList) {
-        StringBuilder stringBuilder = new StringBuilder("insert into push_notifications(created_at,updated_at,session_id,amount_minor,currency,virtual_acct_no,merchant_id,"+
+        StringBuilder stringBuilder = new StringBuilder("insert ignore into push_notifications(created_at,updated_at,session_id,amount_minor,currency,virtual_acct_no,merchant_id,"+
                 "transfer_service_id,source_acct_name,source_acct_no,source_bank_code,narration,transaction_status,channel,notification_acknowledgement,being_sent_to_merchant,num_retries)" +
                 "\nvalues");
 
