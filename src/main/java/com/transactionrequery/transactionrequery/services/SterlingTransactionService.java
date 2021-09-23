@@ -60,7 +60,11 @@ public class SterlingTransactionService {
                 List<SterlingRequeryResponseData> sterlingRequeryResponseData = sterlingApiService.requerySterlingTransactions(sterlingRequeryRequest);
                 List<SterlingRequeryResponseData> requeryResponseDataFilteredList = sterlingRequeryResponseData.stream().filter(transaction -> !Strings.isBlank(transaction.getAccountNumber()))
                         .collect(Collectors.toList());
-                sterlingRequeryResponseDataList.addAll(requeryResponseDataFilteredList);
+                if (requeryResponseDataFilteredList.size() == 0) {
+                    log.info("No result found on sterling's API for session id: {}", sessionId);
+                } else {
+                    sterlingRequeryResponseDataList.addAll(requeryResponseDataFilteredList);
+                }
             } catch (Exception ex) {
                 log.error("Error occurred while retrieving details for session id {}", sessionId);
             }
