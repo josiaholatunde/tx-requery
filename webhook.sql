@@ -1,0 +1,3 @@
+INSERT INTO merchant_event_configuration(event_type, event_url, merchant_id, authentication_type, authentication_credentials,created_on,last_modified_on,created_by, modified_by, status, event_category) 
+VALUES('SUCCESSFUL_DISBURSEMENT',"https://pay-cloud-web-hwtest2.jirongyunke.net/paycloud/payOutNotify/monnify_13_1721000000507871",6014,'BASIC_AUTH',
+"77+9eWLvv73vv73vv73vv73vv71v77+977+9OklHK0NzTlNxT3hpRXlVb0htOXhQbGFDenJQR3hVQW5RTlhGUmxHa1FESkpWTUtPcC8xSXdDVU1sZEIyVW5VTjZlR1djeHp4a2JpajBaM2k1SjE5bHZUZ1ZuQkZnQUFEM0hBL2ZBV1ZrdEtNU0xiTjNtb3hUbWErY3J5Z1AveHBCcEx2Ylp2OGxySG4wWnc9PQ==",current_timestamp(),current_timestamp(),'LAHRAY', 'LAHRAY', 'ACTIVE','DISBURSEMENT');
